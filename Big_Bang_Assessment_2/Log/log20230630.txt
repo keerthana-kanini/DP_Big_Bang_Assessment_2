@@ -119,3 +119,186 @@ VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
 2023-06-30 18:12:32.652 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.PostDoctor (Big_Bang_Assessment_2) in 9940.5598ms
 2023-06-30 18:12:32.663 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.PostDoctor (Big_Bang_Assessment_2)'
 2023-06-30 18:12:32.746 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7123/api/Doctor multipart/form-data;+boundary=----WebKitFormBoundary8Z8L4nMEY07rTude 223226 - 201 296606 application/json;+charset=utf-8 11585.5138ms
+2023-06-30 19:23:19.527 +05:30 [INF] User profile is available. Using 'C:\Users\test\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-30 19:23:26.914 +05:30 [INF] Now listening on: https://localhost:7123
+2023-06-30 19:23:26.916 +05:30 [INF] Now listening on: http://localhost:5228
+2023-06-30 19:23:26.921 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-30 19:23:26.924 +05:30 [INF] Hosting environment: Development
+2023-06-30 19:23:26.926 +05:30 [INF] Content root path: C:\Users\test\source\repos\Big_Bang_Assessment_2\Big_Bang_Assessment_2\
+2023-06-30 19:23:42.665 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/index.html - -
+2023-06-30 19:23:47.447 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_vs/browserLink - -
+2023-06-30 19:23:47.447 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - -
+2023-06-30 19:23:47.503 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/index.html - - - 200 - text/html;charset=utf-8 4730.7226ms
+2023-06-30 19:23:47.615 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - - - 200 12012 application/javascript;+charset=utf-8 167.9582ms
+2023-06-30 19:23:47.895 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 447.4711ms
+2023-06-30 19:23:48.310 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - -
+2023-06-30 19:23:49.110 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT api/Doctor/{id}" for actions - Big_Bang_Assessment_2.Controllers.DoctorController.PutDoctor (Big_Bang_Assessment_2),Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-30 19:23:52.074 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 3763.8197ms
+2023-06-30 19:25:07.250 +05:30 [INF] User profile is available. Using 'C:\Users\test\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-30 19:25:08.074 +05:30 [INF] Now listening on: https://localhost:7123
+2023-06-30 19:25:08.084 +05:30 [INF] Now listening on: http://localhost:5228
+2023-06-30 19:25:08.094 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-30 19:25:08.098 +05:30 [INF] Hosting environment: Development
+2023-06-30 19:25:08.100 +05:30 [INF] Content root path: C:\Users\test\source\repos\Big_Bang_Assessment_2\Big_Bang_Assessment_2\
+2023-06-30 19:25:10.667 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/index.html - -
+2023-06-30 19:25:12.132 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/index.html - - - 200 - text/html;charset=utf-8 1508.9702ms
+2023-06-30 19:25:12.198 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - -
+2023-06-30 19:25:12.218 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_vs/browserLink - -
+2023-06-30 19:25:12.271 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - - - 200 12012 application/javascript;+charset=utf-8 72.5298ms
+2023-06-30 19:25:12.463 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 244.9982ms
+2023-06-30 19:25:12.566 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - -
+2023-06-30 19:25:12.930 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "PUT api/Doctor/{id}" for actions - Big_Bang_Assessment_2.Controllers.DoctorController.PutDoctor (Big_Bang_Assessment_2),Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-30 19:25:13.071 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 504.4824ms
+2023-06-30 19:27:19.496 +05:30 [INF] User profile is available. Using 'C:\Users\test\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-30 19:27:20.119 +05:30 [INF] Now listening on: https://localhost:7123
+2023-06-30 19:27:20.121 +05:30 [INF] Now listening on: http://localhost:5228
+2023-06-30 19:27:20.131 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-30 19:27:20.134 +05:30 [INF] Hosting environment: Development
+2023-06-30 19:27:20.135 +05:30 [INF] Content root path: C:\Users\test\source\repos\Big_Bang_Assessment_2\Big_Bang_Assessment_2\
+2023-06-30 19:27:22.636 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/index.html - -
+2023-06-30 19:27:24.173 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/index.html - - - 200 - text/html;charset=utf-8 1546.9116ms
+2023-06-30 19:27:24.311 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_vs/browserLink - -
+2023-06-30 19:27:24.311 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - -
+2023-06-30 19:27:24.343 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - - - 200 12012 application/javascript;+charset=utf-8 32.5980ms
+2023-06-30 19:27:24.484 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 173.0634ms
+2023-06-30 19:27:24.606 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - -
+2023-06-30 19:27:25.213 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 606.6784ms
+2023-06-30 19:30:12.863 +05:30 [INF] User profile is available. Using 'C:\Users\test\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-06-30 19:30:13.857 +05:30 [INF] Now listening on: https://localhost:7123
+2023-06-30 19:30:13.868 +05:30 [INF] Now listening on: http://localhost:5228
+2023-06-30 19:30:13.879 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-06-30 19:30:13.883 +05:30 [INF] Hosting environment: Development
+2023-06-30 19:30:13.884 +05:30 [INF] Content root path: C:\Users\test\source\repos\Big_Bang_Assessment_2\Big_Bang_Assessment_2\
+2023-06-30 19:30:16.739 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/index.html - -
+2023-06-30 19:30:18.551 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/index.html - - - 200 - text/html;charset=utf-8 1818.6130ms
+2023-06-30 19:30:18.662 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_vs/browserLink - -
+2023-06-30 19:30:18.662 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - -
+2023-06-30 19:30:18.701 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - - - 200 12012 application/javascript;+charset=utf-8 39.2443ms
+2023-06-30 19:30:18.921 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 258.7908ms
+2023-06-30 19:30:19.098 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - -
+2023-06-30 19:30:19.635 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 537.1760ms
+2023-06-30 19:30:34.243 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-06-30 19:30:34.738 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-06-30 19:30:34.888 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-06-30 19:30:42.075 +05:30 [INF] Executed DbCommand (354ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+FROM [Doctors] AS [d]
+2023-06-30 19:30:42.684 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-30 19:30:43.488 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 8577.0357ms
+2023-06-30 19:30:43.493 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-06-30 19:30:43.533 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 296608 application/json;+charset=utf-8 9289.7159ms
+2023-06-30 19:34:16.950 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7123/api/Doctor/1 multipart/form-data;+boundary=----WebKitFormBoundaryjKGM3RTD7szf2qPB 1048782
+2023-06-30 19:34:16.982 +05:30 [INF] CORS policy execution successful.
+2023-06-30 19:34:16.993 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2)'
+2023-06-30 19:34:17.090 +05:30 [INF] Route matched with {action = "UpdateDoctor", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateDoctor(Int32, ClassLibrary.Models.Doctor, Microsoft.AspNetCore.Http.IFormFile) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-06-30 19:34:17.495 +05:30 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2023-06-30 19:34:17.567 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2) in 469.5706ms
+2023-06-30 19:34:17.575 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2)'
+2023-06-30 19:34:17.612 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7123/api/Doctor/1 multipart/form-data;+boundary=----WebKitFormBoundaryjKGM3RTD7szf2qPB 1048782 - 400 163 application/problem+json;+charset=utf-8 662.5258ms
+2023-06-30 19:34:41.153 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7123/api/Doctor/1 multipart/form-data;+boundary=----WebKitFormBoundarye9LA3PBJnnpX9m1x 1048879
+2023-06-30 19:34:41.218 +05:30 [INF] CORS policy execution successful.
+2023-06-30 19:34:41.220 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2)'
+2023-06-30 19:34:41.224 +05:30 [INF] Route matched with {action = "UpdateDoctor", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateDoctor(Int32, ClassLibrary.Models.Doctor, Microsoft.AspNetCore.Http.IFormFile) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-06-30 19:34:42.765 +05:30 [INF] Executed DbCommand (986ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = -1) (DbType = Binary), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Doctors] SET [Contact_No] = @p0, [Doctor_Email] = @p1, [Doctor_Name] = @p2, [ImageData] = @p3, [Password] = @p4, [Specialization] = @p5, [Status] = @p6
+OUTPUT 1
+WHERE [Doctor_Id] = @p7;
+2023-06-30 19:34:42.837 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-06-30 19:34:42.838 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2) in 1608.5997ms
+2023-06-30 19:34:42.841 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2)'
+2023-06-30 19:34:42.847 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7123/api/Doctor/1 multipart/form-data;+boundary=----WebKitFormBoundarye9LA3PBJnnpX9m1x 1048879 - 204 - - 1694.0388ms
+2023-06-30 19:34:54.767 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-06-30 19:34:54.769 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-06-30 19:34:54.772 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-06-30 19:34:54.979 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+FROM [Doctors] AS [d]
+2023-06-30 19:34:55.071 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-30 19:34:55.577 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 795.2277ms
+2023-06-30 19:34:55.586 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-06-30 19:34:55.589 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 1397343 application/json;+charset=utf-8 821.5303ms
+2023-06-30 19:35:35.883 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-06-30 19:35:35.902 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-06-30 19:35:35.910 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-06-30 19:35:35.924 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+FROM [Doctors] AS [d]
+2023-06-30 19:35:36.077 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-06-30 19:35:36.353 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 437.838ms
+2023-06-30 19:35:36.358 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-06-30 19:35:36.361 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 1397343 application/json;+charset=utf-8 478.8473ms
+2023-06-30 19:35:48.426 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor/1 - -
+2023-06-30 19:35:48.429 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2)'
+2023-06-30 19:35:48.436 +05:30 [INF] Route matched with {action = "GetDoctor", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ClassLibrary.Models.Doctor]] GetDoctor(Int32) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-06-30 19:35:49.081 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+FROM [Doctors] AS [d]
+WHERE [d].[Doctor_Id] = @__p_0
+2023-06-30 19:35:49.126 +05:30 [INF] Executing OkObjectResult, writing value of type 'ClassLibrary.Models.Doctor'.
+2023-06-30 19:35:49.267 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2) in 824.1552ms
+2023-06-30 19:35:49.271 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2)'
+2023-06-30 19:35:49.275 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor/1 - - - 200 1397341 application/json;+charset=utf-8 849.0513ms
+2023-06-30 19:40:12.696 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7123/api/Appointment application/json-patch+json 214
+2023-06-30 19:40:12.699 +05:30 [INF] CORS policy execution successful.
+2023-06-30 19:40:12.701 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.AppointmentController.PostAppointment (Big_Bang_Assessment_2)'
+2023-06-30 19:40:12.708 +05:30 [INF] Route matched with {action = "PostAppointment", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ClassLibrary.Models.Appointment]] PostAppointment(ClassLibrary.Models.Appointment) on controller Big_Bang_Assessment_2.Controllers.AppointmentController (Big_Bang_Assessment_2).
+2023-06-30 19:40:12.780 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.AppointmentController.PostAppointment (Big_Bang_Assessment_2) in 24.2239ms
+2023-06-30 19:40:12.793 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.AppointmentController.PostAppointment (Big_Bang_Assessment_2)'
+2023-06-30 19:40:12.819 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Big_Bang_Assessment_2.Repository.RepositoryClass.AppointmentRepository' while attempting to activate 'Big_Bang_Assessment_2.Controllers.AppointmentController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method155(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-30 19:40:13.273 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7123/api/Appointment application/json-patch+json 214 - 500 - text/plain;+charset=utf-8 576.4306ms
+2023-06-30 19:40:20.523 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7123/api/Appointment application/json-patch+json 213
+2023-06-30 19:40:20.527 +05:30 [INF] CORS policy execution successful.
+2023-06-30 19:40:20.529 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.AppointmentController.PostAppointment (Big_Bang_Assessment_2)'
+2023-06-30 19:40:20.531 +05:30 [INF] Route matched with {action = "PostAppointment", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ClassLibrary.Models.Appointment]] PostAppointment(ClassLibrary.Models.Appointment) on controller Big_Bang_Assessment_2.Controllers.AppointmentController (Big_Bang_Assessment_2).
+2023-06-30 19:40:20.538 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.AppointmentController.PostAppointment (Big_Bang_Assessment_2) in 0.801ms
+2023-06-30 19:40:20.544 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.AppointmentController.PostAppointment (Big_Bang_Assessment_2)'
+2023-06-30 19:40:20.549 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Big_Bang_Assessment_2.Repository.RepositoryClass.AppointmentRepository' while attempting to activate 'Big_Bang_Assessment_2.Controllers.AppointmentController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method155(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-06-30 19:40:20.582 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7123/api/Appointment application/json-patch+json 213 - 500 - text/plain;+charset=utf-8 58.8936ms

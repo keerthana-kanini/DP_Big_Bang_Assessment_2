@@ -1,5 +1,6 @@
 ﻿using Big_Bang_Assessment_2.DBContext;
 using ClassLibrary.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Big_Bang_Assessment_2.Repository.RepositoryClass
 {

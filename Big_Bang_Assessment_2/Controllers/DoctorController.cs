@@ -44,18 +44,24 @@ namespace Big_Bang_Assessment_2.Controllers
 
         // PUT: api/Doctors/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutDoctor(int id, Doctor doctor)
+        public async Task<IActionResult> UpdateDoctor(int id, [FromForm] Doctor doctor, IFormFile imageFile)
         {
             if (id != doctor.Doctor_Id)
             {
                 return BadRequest();
             }
 
+            if (imageFile != null && imageFile.Length > 0)
+            {
+                var imageData = await ConvertImageToByteArray(imageFile);
+                doctor.ImageData = imageData;
+            }
+
             try
             {
                 await _doctorRepository.UpdateDoctor(doctor);
             }
-            catch (DbUpdateConcurrencyException)
+            catch
             {
                 if (!await _doctorRepository.DoctorExists(id))
                 {
@@ -69,6 +75,7 @@ namespace Big_Bang_Assessment_2.Controllers
 
             return NoContent();
         }
+
 
         // POST: api/Doctors
         [HttpPost]
@@ -110,5 +117,6 @@ namespace Big_Bang_Assessment_2.Controllers
 
             return NoContent();
         }
+       
     }
 }

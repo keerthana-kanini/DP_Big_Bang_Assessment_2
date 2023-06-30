@@ -1562,6 +1562,22 @@
             "rid": "win"
           }
         }
+      },
+      "ClassLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.19",
+          "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.19",
+          "Serilog.AspNetCore": "7.0.0",
+          "Serilog.Expressions": "3.4.1"
+        },
+        "compile": {
+          "bin/placeholder/ClassLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ClassLibrary.dll": {}
+        }
       }
     }
   },
@@ -4434,10 +4450,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "ClassLibrary/1.0.0": {
+      "type": "project",
+      "path": "../ClassLibrary/ClassLibrary.csproj",
+      "msbuildProject": "../ClassLibrary/ClassLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "ClassLibrary >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 6.0.19",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 6.0.19",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.8",
@@ -4473,7 +4495,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\test\\source\\repos\\Big_Bang_Assessment_2\\ClassLibrary\\ClassLibrary.csproj": {
+              "projectPath": "C:\\Users\\test\\source\\repos\\Big_Bang_Assessment_2\\ClassLibrary\\ClassLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

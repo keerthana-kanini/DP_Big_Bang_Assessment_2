@@ -1,5 +1,8 @@
+using Big_Bang_Assessment_2.Controllers;
 using Big_Bang_Assessment_2.DBContext;
+using Big_Bang_Assessment_2.Repository.Interface;
 using Big_Bang_Assessment_2.Repository.RepositoryClass;
+using ClassLibrary.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -35,23 +38,25 @@ builder.Services.AddSwaggerGen(c => {
                                      Id = "Bearer"
                                  }
                              },
-                             new string[] {}
+            new string[] {}
 
                      }
                  });
 });
 builder.Services.AddDbContext<HospitalDPContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DoctorPatient")));
+
+
+builder.Services.AddScoped<IDoctor, DoctorRepository>();
+
+
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 });
 
 
-//builder.Services.AddScoped<IHospitalRepository, HospitalRepository>();
-//builder.Services.AddScoped<IAdminRepository, AdminRepository>();
-//builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
-//builder.Services.AddScoped<IPatientRepository, PatientRepository>();
-//builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
+
+
 
 
 // Adding Authentication

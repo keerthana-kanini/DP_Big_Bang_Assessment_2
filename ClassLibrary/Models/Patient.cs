@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ClassLibrary.Models
 {
@@ -19,11 +16,11 @@ namespace ClassLibrary.Models
         public string Patient_No { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
 
-        public Doctor? Doctor { get; set; }
+        // Navigation property for doctor
+        public int? DoctorId { get; set; }
+        public Doctor ? Doctor { get; set; }
 
-
-
-
-
+        // Navigation property for appointments
+        public ICollection<Appointment> ? Appointments { get; set; } 
     }
 }

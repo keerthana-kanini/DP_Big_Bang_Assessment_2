@@ -9,6 +9,8 @@ namespace Big_Bang_Assessment_2.DBContext
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Admin> Admins { get; set; }
 
+        public DbSet<Appointment> Appointments { get; set; }    
+
         public HospitalDPContext(DbContextOptions<HospitalDPContext> options) : base(options)
         {
 

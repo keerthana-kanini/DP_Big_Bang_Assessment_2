@@ -1,10 +1,11 @@
 ﻿using Big_Bang_Assessment_2.DBContext;
+using Big_Bang_Assessment_2.Repository.Interface;
 using ClassLibrary.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Big_Bang_Assessment_2.Repository.RepositoryClass
 {
-    public class AdminRepository
+    public class AdminRepository : IAdmin
     {
         private readonly HospitalDPContext _context;
 

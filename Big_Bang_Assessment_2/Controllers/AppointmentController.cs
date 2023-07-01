@@ -1,4 +1,5 @@
-﻿using Big_Bang_Assessment_2.Repository.RepositoryClass;
+﻿using Big_Bang_Assessment_2.Repository.Interface;
+using Big_Bang_Assessment_2.Repository.RepositoryClass;
 using ClassLibrary.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -9,9 +10,9 @@ namespace Big_Bang_Assessment_2.Controllers
     [ApiController]
     public class AppointmentController : ControllerBase
     {
-        private readonly AppointmentRepository _appointmentRepository;
+        private readonly IAppointment _appointmentRepository;
 
-        public AppointmentController(AppointmentRepository appointmentRepository)
+        public AppointmentController(IAppointment appointmentRepository)
         {
             _appointmentRepository = appointmentRepository;
         }

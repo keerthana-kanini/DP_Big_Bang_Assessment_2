@@ -1,4 +1,5 @@
-﻿using Big_Bang_Assessment_2.Repository.RepositoryClass;
+﻿using Big_Bang_Assessment_2.Repository.Interface;
+using Big_Bang_Assessment_2.Repository.RepositoryClass;
 using ClassLibrary.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -11,9 +12,9 @@ namespace Big_Bang_Assessment_2.Controllers
     [ApiController]
     public class AdminController : ControllerBase
     {
-        private readonly AdminRepository _adminRepository;
+        private readonly IAdmin _adminRepository;
 
-        public AdminController(AdminRepository adminRepository)
+        public AdminController(IAdmin adminRepository)
         {
             _adminRepository = adminRepository;
         }

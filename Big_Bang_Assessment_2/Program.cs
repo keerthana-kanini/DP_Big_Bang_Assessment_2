@@ -8,16 +8,17 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using System;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c => {
+builder.Services.AddSwaggerGen(c =>
+{
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -28,36 +29,32 @@ builder.Services.AddSwaggerGen(c => {
         Description = "JWT Authorization header using the Bearer scheme."
     });
     c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                 {
-                     {
-                           new OpenApiSecurityScheme
-                             {
-                                 Reference = new OpenApiReference
-                                 {
-                                     Type = ReferenceType.SecurityScheme,
-                                     Id = "Bearer"
-                                 }
-                             },
-            new string[] {}
-
-                     }
-                 });
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
 });
+
 builder.Services.AddDbContext<HospitalDPContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DoctorPatient")));
 
-
 builder.Services.AddScoped<IDoctor, DoctorRepository>();
-
+builder.Services.AddScoped<IAppointment, AppointmentRepository>();
+builder.Services.AddScoped<IAdmin, AdminRepository>();
+builder.Services.AddScoped<IPatient, PatientRepository>();
 
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 });
-
-
-
-
-
 
 // Adding Authentication
 builder.Services.AddAuthentication(options =>
@@ -66,8 +63,6 @@ builder.Services.AddAuthentication(options =>
     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
     options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
 })
-
-// Adding Jwt Bearer
 .AddJwtBearer(options =>
 {
     options.SaveToken = true;
@@ -97,11 +92,9 @@ builder.Services.AddCors(options =>
     {
         builder.AllowAnyOrigin()
                .AllowAnyMethod()
-                .AllowAnyHeader();
+               .AllowAnyHeader();
     });
 });
-
-
 
 var app = builder.Build();
 
@@ -113,13 +106,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.UseAuthentication();
-
 app.UseCors("DP");
-
 app.MapControllers();
-
 app.Run();

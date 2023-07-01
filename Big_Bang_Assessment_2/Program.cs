@@ -39,11 +39,10 @@ builder.Services.AddSwaggerGen(c =>
                     Id = "Bearer"
                 }
             },
-            Array.Empty<string>()
+            new string[] {}
         }
     });
 });
-
 builder.Services.AddDbContext<HospitalDPContext>(opt => opt.UseSqlServer(builder.Configuration.GetConnectionString("DoctorPatient")));
 
 builder.Services.AddScoped<IDoctor, DoctorRepository>();
@@ -104,10 +103,16 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors("DP");
+
+app.UseAuthentication();
 
 app.UseHttpsRedirection();
+
 app.UseAuthorization();
-app.UseAuthentication();
-app.UseCors("DP");
+
 app.MapControllers();
+
 app.Run();
+
+

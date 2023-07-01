@@ -300,3 +300,254 @@ ORDER BY [p].[Patient_Id], [d].[Doctor_Id]
 2023-07-01 13:35:51.361 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.PatientController.GetPatients (Big_Bang_Assessment_2) in 511.1899ms
 2023-07-01 13:35:51.364 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.PatientController.GetPatients (Big_Bang_Assessment_2)'
 2023-07-01 13:35:51.368 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Patient - - - 200 2795269 application/json;+charset=utf-8 558.2859ms
+2023-07-01 13:54:20.533 +05:30 [INF] User profile is available. Using 'C:\Users\test\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-01 13:54:21.532 +05:30 [INF] Now listening on: https://localhost:7123
+2023-07-01 13:54:21.547 +05:30 [INF] Now listening on: http://localhost:5228
+2023-07-01 13:54:21.557 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-01 13:54:21.560 +05:30 [INF] Hosting environment: Development
+2023-07-01 13:54:21.562 +05:30 [INF] Content root path: C:\Users\test\source\repos\Big_Bang_Assessment_2\Big_Bang_Assessment_2\
+2023-07-01 13:54:24.937 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/index.html - -
+2023-07-01 13:54:26.772 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/index.html - - - 200 - text/html;charset=utf-8 1847.1971ms
+2023-07-01 13:54:26.892 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - -
+2023-07-01 13:54:26.911 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - - - 200 12012 application/javascript;+charset=utf-8 19.1094ms
+2023-07-01 13:54:27.441 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_vs/browserLink - -
+2023-07-01 13:54:27.589 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 147.5487ms
+2023-07-01 13:54:28.182 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - -
+2023-07-01 13:54:28.519 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 337.1452ms
+2023-07-01 13:55:13.637 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-01 13:55:13.721 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The AuthorizationPolicy named: 'Admin' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-07-01 13:55:13.831 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 500 - text/plain;+charset=utf-8 194.0733ms
+2023-07-01 13:56:44.735 +05:30 [INF] User profile is available. Using 'C:\Users\test\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-01 13:56:46.170 +05:30 [INF] Now listening on: https://localhost:7123
+2023-07-01 13:56:46.203 +05:30 [INF] Now listening on: http://localhost:5228
+2023-07-01 13:56:46.216 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-01 13:56:46.219 +05:30 [INF] Hosting environment: Development
+2023-07-01 13:56:46.221 +05:30 [INF] Content root path: C:\Users\test\source\repos\Big_Bang_Assessment_2\Big_Bang_Assessment_2\
+2023-07-01 13:56:49.752 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/index.html - -
+2023-07-01 13:56:52.375 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/index.html - - - 200 - text/html;charset=utf-8 2653.9632ms
+2023-07-01 13:56:52.783 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - -
+2023-07-01 13:56:52.783 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_vs/browserLink - -
+2023-07-01 13:56:52.825 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - - - 200 12012 application/javascript;+charset=utf-8 41.9343ms
+2023-07-01 13:56:52.968 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 184.1980ms
+2023-07-01 13:56:53.268 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - -
+2023-07-01 13:56:54.138 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 870.0013ms
+2023-07-01 13:57:06.735 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-01 13:57:06.778 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2023-07-01 13:57:07.100 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-01 13:57:07.102 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 401 0 - 366.9755ms
+2023-07-01 13:57:58.077 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7123/api/Tokens/Admin application/json-patch+json 65
+2023-07-01 13:57:58.107 +05:30 [INF] CORS policy execution successful.
+2023-07-01 13:57:58.142 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2)'
+2023-07-01 13:57:58.429 +05:30 [INF] Route matched with {action = "PostAdmin", controller = "Tokens"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdmin(ClassLibrary.Models.Admin) on controller Big_Bang_Assessment_2.Controllers.TokensController (Big_Bang_Assessment_2).
+2023-07-01 13:58:06.657 +05:30 [INF] Executed DbCommand (448ms) [Parameters=[@__Admin_Name_0='?' (Size = 4000), @__Admin_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Admin_Id], [a].[Admin_Email], [a].[Admin_Name], [a].[Admin_Password]
+FROM [Admins] AS [a]
+WHERE [a].[Admin_Name] = @__Admin_Name_0 AND [a].[Admin_Password] = @__Admin_Password_1
+2023-07-01 13:58:07.429 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-07-01 13:58:07.456 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2) in 9006.525ms
+2023-07-01 13:58:07.501 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2)'
+2023-07-01 13:58:07.574 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7123/api/Tokens/Admin application/json-patch+json 65 - 200 - text/plain;+charset=utf-8 9497.2180ms
+2023-07-01 13:58:26.524 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-01 13:58:26.545 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2023-07-01 13:58:26.893 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-01 13:58:26.902 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 401 0 - 378.9251ms
+2023-07-01 13:59:10.186 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Patient - -
+2023-07-01 13:59:10.201 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Doctor)
+2023-07-01 13:59:10.204 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-01 13:59:10.206 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Patient - - - 401 0 - 21.0637ms
+2023-07-01 14:00:09.610 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7123/api/Tokens/Admin application/json-patch+json 65
+2023-07-01 14:00:09.627 +05:30 [INF] CORS policy execution successful.
+2023-07-01 14:00:09.630 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2)'
+2023-07-01 14:00:09.635 +05:30 [INF] Route matched with {action = "PostAdmin", controller = "Tokens"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdmin(ClassLibrary.Models.Admin) on controller Big_Bang_Assessment_2.Controllers.TokensController (Big_Bang_Assessment_2).
+2023-07-01 14:00:09.669 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[@__Admin_Name_0='?' (Size = 4000), @__Admin_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Admin_Id], [a].[Admin_Email], [a].[Admin_Name], [a].[Admin_Password]
+FROM [Admins] AS [a]
+WHERE [a].[Admin_Name] = @__Admin_Name_0 AND [a].[Admin_Password] = @__Admin_Password_1
+2023-07-01 14:00:09.676 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-07-01 14:00:09.682 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2) in 42.6131ms
+2023-07-01 14:00:09.685 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2)'
+2023-07-01 14:00:09.692 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7123/api/Tokens/Admin application/json-patch+json 65 - 200 - text/plain;+charset=utf-8 81.6573ms
+2023-07-01 14:00:34.854 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-01 14:00:34.863 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2023-07-01 14:00:34.865 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-01 14:00:34.867 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 401 0 - 14.3154ms
+2023-07-01 14:13:17.166 +05:30 [INF] User profile is available. Using 'C:\Users\test\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-01 14:13:18.136 +05:30 [INF] Now listening on: https://localhost:7123
+2023-07-01 14:13:18.140 +05:30 [INF] Now listening on: http://localhost:5228
+2023-07-01 14:13:18.155 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-01 14:13:18.158 +05:30 [INF] Hosting environment: Development
+2023-07-01 14:13:18.160 +05:30 [INF] Content root path: C:\Users\test\source\repos\Big_Bang_Assessment_2\Big_Bang_Assessment_2\
+2023-07-01 14:13:20.903 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/index.html - -
+2023-07-01 14:13:22.658 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/index.html - - - 200 - text/html;charset=utf-8 1769.0067ms
+2023-07-01 14:13:22.830 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - -
+2023-07-01 14:13:22.835 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_vs/browserLink - -
+2023-07-01 14:13:22.852 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - - - 200 12012 application/javascript;+charset=utf-8 22.0942ms
+2023-07-01 14:13:23.006 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 171.2191ms
+2023-07-01 14:13:23.163 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - -
+2023-07-01 14:13:23.676 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 512.2658ms
+2023-07-01 14:14:15.278 +05:30 [INF] User profile is available. Using 'C:\Users\test\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-01 14:14:16.135 +05:30 [INF] Now listening on: https://localhost:7123
+2023-07-01 14:14:16.138 +05:30 [INF] Now listening on: http://localhost:5228
+2023-07-01 14:14:16.148 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-01 14:14:16.151 +05:30 [INF] Hosting environment: Development
+2023-07-01 14:14:16.153 +05:30 [INF] Content root path: C:\Users\test\source\repos\Big_Bang_Assessment_2\Big_Bang_Assessment_2\
+2023-07-01 14:14:17.858 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/index.html - -
+2023-07-01 14:14:18.844 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/index.html - - - 200 - text/html;charset=utf-8 997.3563ms
+2023-07-01 14:14:18.972 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_vs/browserLink - -
+2023-07-01 14:14:18.977 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - -
+2023-07-01 14:14:19.012 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - - - 200 12012 application/javascript;+charset=utf-8 35.3058ms
+2023-07-01 14:14:19.095 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 121.2568ms
+2023-07-01 14:14:19.184 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - -
+2023-07-01 14:14:19.612 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 428.0062ms
+2023-07-01 14:14:49.948 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7123/api/Tokens/Admin application/json-patch+json 64
+2023-07-01 14:14:50.192 +05:30 [INF] CORS policy execution successful.
+2023-07-01 14:14:50.207 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2)'
+2023-07-01 14:14:50.290 +05:30 [INF] Route matched with {action = "PostAdmin", controller = "Tokens"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdmin(ClassLibrary.Models.Admin) on controller Big_Bang_Assessment_2.Controllers.TokensController (Big_Bang_Assessment_2).
+2023-07-01 14:14:55.840 +05:30 [INF] Executed DbCommand (392ms) [Parameters=[@__Admin_Name_0='?' (Size = 4000), @__Admin_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Admin_Id], [a].[Admin_Email], [a].[Admin_Name], [a].[Admin_Password]
+FROM [Admins] AS [a]
+WHERE [a].[Admin_Name] = @__Admin_Name_0 AND [a].[Admin_Password] = @__Admin_Password_1
+2023-07-01 14:14:56.726 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-07-01 14:14:56.774 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2) in 6444.5356ms
+2023-07-01 14:14:56.784 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2)'
+2023-07-01 14:14:56.846 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7123/api/Tokens/Admin application/json-patch+json 64 - 200 - text/plain;+charset=utf-8 6897.1734ms
+2023-07-01 14:15:13.458 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Appointment - -
+2023-07-01 14:15:13.478 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Doctor|Patient)
+2023-07-01 14:15:13.504 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-01 14:15:13.507 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Appointment - - - 401 0 - 48.8444ms
+2023-07-01 14:15:24.002 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Appointment - -
+2023-07-01 14:15:24.005 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Doctor|Patient)
+2023-07-01 14:15:24.226 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-01 14:15:24.229 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Appointment - - - 401 0 - 227.0884ms
+2023-07-01 14:15:28.907 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Appointment - -
+2023-07-01 14:15:28.910 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin|Doctor|Patient)
+2023-07-01 14:15:28.913 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-01 14:15:28.915 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Appointment - - - 401 0 - 8.1437ms
+2023-07-01 14:16:52.397 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Admin - -
+2023-07-01 14:16:52.403 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.AdminController.GetAdmins (Big_Bang_Assessment_2)'
+2023-07-01 14:16:52.412 +05:30 [INF] Route matched with {action = "GetAdmins", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Admin]]] GetAdmins() on controller Big_Bang_Assessment_2.Controllers.AdminController (Big_Bang_Assessment_2).
+2023-07-01 14:16:52.481 +05:30 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Admin_Id], [a].[Admin_Email], [a].[Admin_Name], [a].[Admin_Password]
+FROM [Admins] AS [a]
+2023-07-01 14:16:52.499 +05:30 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Admin, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-01 14:16:52.651 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.AdminController.GetAdmins (Big_Bang_Assessment_2) in 235.2704ms
+2023-07-01 14:16:52.655 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.AdminController.GetAdmins (Big_Bang_Assessment_2)'
+2023-07-01 14:16:52.665 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Admin - - - 200 133 application/json;+charset=utf-8 269.7832ms
+2023-07-01 14:17:52.797 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-01 14:17:52.807 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2023-07-01 14:17:52.810 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-01 14:17:52.813 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 401 0 - 15.7346ms
+2023-07-01 14:21:02.270 +05:30 [INF] User profile is available. Using 'C:\Users\test\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-01 14:21:02.998 +05:30 [INF] Now listening on: https://localhost:7123
+2023-07-01 14:21:03.001 +05:30 [INF] Now listening on: http://localhost:5228
+2023-07-01 14:21:03.009 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-01 14:21:03.011 +05:30 [INF] Hosting environment: Development
+2023-07-01 14:21:03.012 +05:30 [INF] Content root path: C:\Users\test\source\repos\Big_Bang_Assessment_2\Big_Bang_Assessment_2\
+2023-07-01 14:21:05.183 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/index.html - -
+2023-07-01 14:21:06.711 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/index.html - - - 200 - text/html;charset=utf-8 1524.9815ms
+2023-07-01 14:21:06.732 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - -
+2023-07-01 14:21:06.751 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_vs/browserLink - -
+2023-07-01 14:21:06.811 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - - - 200 12012 application/javascript;+charset=utf-8 78.5490ms
+2023-07-01 14:21:07.028 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 276.7370ms
+2023-07-01 14:21:07.172 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - -
+2023-07-01 14:21:07.877 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 704.5938ms
+2023-07-01 14:21:15.963 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-01 14:21:15.987 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2023-07-01 14:21:16.180 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-01 14:21:16.182 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 401 0 - 218.5533ms
+2023-07-01 14:21:53.151 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7123/api/Tokens/Admin application/json-patch+json 63
+2023-07-01 14:21:53.246 +05:30 [INF] CORS policy execution successful.
+2023-07-01 14:21:53.296 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2)'
+2023-07-01 14:21:53.579 +05:30 [INF] Route matched with {action = "PostAdmin", controller = "Tokens"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdmin(ClassLibrary.Models.Admin) on controller Big_Bang_Assessment_2.Controllers.TokensController (Big_Bang_Assessment_2).
+2023-07-01 14:22:00.366 +05:30 [INF] Executed DbCommand (172ms) [Parameters=[@__Admin_Name_0='?' (Size = 4000), @__Admin_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Admin_Id], [a].[Admin_Email], [a].[Admin_Name], [a].[Admin_Password]
+FROM [Admins] AS [a]
+WHERE [a].[Admin_Name] = @__Admin_Name_0 AND [a].[Admin_Password] = @__Admin_Password_1
+2023-07-01 14:22:00.501 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2023-07-01 14:22:00.519 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2) in 6916.5157ms
+2023-07-01 14:22:00.526 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2)'
+2023-07-01 14:22:00.576 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7123/api/Tokens/Admin application/json-patch+json 63 - 400 - text/plain;+charset=utf-8 7424.8789ms
+2023-07-01 14:22:10.971 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7123/api/Tokens/Admin application/json-patch+json 62
+2023-07-01 14:22:10.980 +05:30 [INF] CORS policy execution successful.
+2023-07-01 14:22:10.994 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2)'
+2023-07-01 14:22:10.998 +05:30 [INF] Route matched with {action = "PostAdmin", controller = "Tokens"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdmin(ClassLibrary.Models.Admin) on controller Big_Bang_Assessment_2.Controllers.TokensController (Big_Bang_Assessment_2).
+2023-07-01 14:22:11.056 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[@__Admin_Name_0='?' (Size = 4000), @__Admin_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Admin_Id], [a].[Admin_Email], [a].[Admin_Name], [a].[Admin_Password]
+FROM [Admins] AS [a]
+WHERE [a].[Admin_Name] = @__Admin_Name_0 AND [a].[Admin_Password] = @__Admin_Password_1
+2023-07-01 14:22:11.594 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-07-01 14:22:11.596 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2) in 592.5072ms
+2023-07-01 14:22:11.599 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2)'
+2023-07-01 14:22:11.608 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7123/api/Tokens/Admin application/json-patch+json 62 - 200 - text/plain;+charset=utf-8 636.6891ms
+2023-07-01 14:22:39.210 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-01 14:22:39.222 +05:30 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (Admin)
+2023-07-01 14:22:39.398 +05:30 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-01 14:22:39.405 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 401 0 - 195.4685ms
+2023-07-01 14:26:45.305 +05:30 [INF] User profile is available. Using 'C:\Users\test\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-01 14:26:46.030 +05:30 [INF] Now listening on: https://localhost:7123
+2023-07-01 14:26:46.033 +05:30 [INF] Now listening on: http://localhost:5228
+2023-07-01 14:26:46.042 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-01 14:26:46.044 +05:30 [INF] Hosting environment: Development
+2023-07-01 14:26:46.046 +05:30 [INF] Content root path: C:\Users\test\source\repos\Big_Bang_Assessment_2\Big_Bang_Assessment_2\
+2023-07-01 14:26:48.058 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/index.html - -
+2023-07-01 14:26:49.541 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/index.html - - - 200 - text/html;charset=utf-8 1504.4690ms
+2023-07-01 14:26:49.701 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - -
+2023-07-01 14:26:49.706 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_vs/browserLink - -
+2023-07-01 14:26:49.837 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - - - 200 12012 application/javascript;+charset=utf-8 135.4238ms
+2023-07-01 14:26:49.990 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 284.4949ms
+2023-07-01 14:26:50.282 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - -
+2023-07-01 14:26:51.008 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 725.9510ms
+2023-07-01 14:27:02.715 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7123/api/Tokens/Admin application/json-patch+json 62
+2023-07-01 14:27:02.795 +05:30 [INF] CORS policy execution successful.
+2023-07-01 14:27:02.949 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2)'
+2023-07-01 14:27:03.022 +05:30 [INF] Route matched with {action = "PostAdmin", controller = "Tokens"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostAdmin(ClassLibrary.Models.Admin) on controller Big_Bang_Assessment_2.Controllers.TokensController (Big_Bang_Assessment_2).
+2023-07-01 14:27:08.400 +05:30 [INF] Executed DbCommand (192ms) [Parameters=[@__Admin_Name_0='?' (Size = 4000), @__Admin_Password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Admin_Id], [a].[Admin_Email], [a].[Admin_Name], [a].[Admin_Password]
+FROM [Admins] AS [a]
+WHERE [a].[Admin_Name] = @__Admin_Name_0 AND [a].[Admin_Password] = @__Admin_Password_1
+2023-07-01 14:27:08.875 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2023-07-01 14:27:08.892 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2) in 5858.5381ms
+2023-07-01 14:27:08.899 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.TokensController.PostAdmin (Big_Bang_Assessment_2)'
+2023-07-01 14:27:08.971 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7123/api/Tokens/Admin application/json-patch+json 62 - 200 - text/plain;+charset=utf-8 6255.6238ms
+2023-07-01 14:27:28.038 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-01 14:27:28.335 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-01 14:27:28.341 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-01 14:27:28.735 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-07-01 14:27:28.835 +05:30 [INF] Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM [Doctors] AS [d]
+LEFT JOIN [Patients] AS [p] ON [d].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [d].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [d].[Doctor_Id], [p].[Patient_Id]
+2023-07-01 14:27:29.049 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-01 14:27:29.291 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 940.8409ms
+2023-07-01 14:27:29.294 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-01 14:27:29.301 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 1398082 application/json;+charset=utf-8 1262.4705ms
+2023-07-01 14:27:49.976 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Appointment - -
+2023-07-01 14:27:49.987 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.AppointmentController.GetAppointments (Big_Bang_Assessment_2)'
+2023-07-01 14:27:50.000 +05:30 [INF] Route matched with {action = "GetAppointments", controller = "Appointment"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Appointment]]] GetAppointments() on controller Big_Bang_Assessment_2.Controllers.AppointmentController (Big_Bang_Assessment_2).
+2023-07-01 14:27:50.346 +05:30 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+FROM [Appointments] AS [a]
+INNER JOIN [Patients] AS [p] ON [a].[PatientId] = [p].[Patient_Id]
+INNER JOIN [Doctors] AS [d] ON [a].[DoctorId] = [d].[Doctor_Id]
+2023-07-01 14:27:50.452 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Appointment, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-01 14:27:50.635 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.AppointmentController.GetAppointments (Big_Bang_Assessment_2) in 630.9933ms
+2023-07-01 14:27:50.643 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.AppointmentController.GetAppointments (Big_Bang_Assessment_2)'
+2023-07-01 14:27:50.648 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Appointment - - - 200 2795242 application/json;+charset=utf-8 682.4107ms

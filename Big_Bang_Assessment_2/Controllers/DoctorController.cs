@@ -4,9 +4,11 @@ using Microsoft.AspNetCore.Mvc;
 using ClassLibrary.Models;
 using ClassLibrary.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Big_Bang_Assessment_2.Controllers
 {
+   // [Authorize(Roles = "Admin")]
     [Route("api/[controller]")]
     [ApiController]
     public class DoctorController : ControllerBase
@@ -21,6 +23,7 @@ namespace Big_Bang_Assessment_2.Controllers
         }
 
         // GET: api/Doctors
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Doctor>>> GetDoctors()
         {

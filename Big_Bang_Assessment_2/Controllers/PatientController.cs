@@ -1,10 +1,13 @@
 ﻿using Big_Bang_Assessment_2.Repository.Interface;
 using ClassLibrary.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
 namespace Big_Bang_Assessment_2.Controllers
 {
+    [Authorize(Roles = "Admin,Doctor")]
     [Route("api/[controller]")]
     [ApiController]
     public class PatientController : ControllerBase

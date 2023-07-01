@@ -7,7 +7,6 @@ namespace Big_Bang_Assessment_2.Repository.RepositoryClass
 {
     public class PatientRepository : IPatient
     {
-
         private readonly HospitalDPContext _context;
 
         public PatientRepository(HospitalDPContext context)
@@ -17,12 +16,18 @@ namespace Big_Bang_Assessment_2.Repository.RepositoryClass
 
         public async Task<IEnumerable<Patient>> GetPatients()
         {
-            return await _context.Patients.ToListAsync();
+            return await _context.Patients
+                .Include(x => x.Doctor)
+                .Include(x => x.Appointments)
+                .ToListAsync();
         }
 
         public async Task<Patient> GetPatient(int id)
         {
-            return await _context.Patients.FindAsync(id);
+            return await _context.Patients
+                .Include(x => x.Doctor)
+                .Include(x => x.Appointments)
+                .FirstOrDefaultAsync(x => x.Patient_Id == id);
         }
 
         public async Task AddPatient(Patient patient)
@@ -49,4 +54,3 @@ namespace Big_Bang_Assessment_2.Repository.RepositoryClass
         }
     }
 }
-

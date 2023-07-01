@@ -18,12 +18,18 @@ namespace ClassLibrary.Repositories
 
         public async Task<IEnumerable<Doctor>> GetDoctors()
         {
-            return await _context.Doctors.ToListAsync();
+            return await _context.Doctors
+                .Include(x => x.Patients)
+                .Include(x => x.Appointments)
+                .ToListAsync();
         }
 
         public async Task<Doctor> GetDoctor(int id)
         {
-            return await _context.Doctors.FindAsync(id);
+            return await _context.Doctors
+                .Include(x => x.Patients)
+                .Include(x => x.Appointments)
+                .FirstOrDefaultAsync(x => x.Doctor_Id == id);
         }
 
         public async Task AddDoctor(Doctor doctor)

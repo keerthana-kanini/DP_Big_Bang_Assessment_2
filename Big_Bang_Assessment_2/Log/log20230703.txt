@@ -1716,3 +1716,418 @@ INNER JOIN [Doctors] AS [d] ON [a].[DoctorId] = [d].[Doctor_Id]
 2023-07-03 15:10:06.492 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.AppointmentController.GetAppointments (Big_Bang_Assessment_2) in 51.7454ms
 2023-07-03 15:10:06.494 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.AppointmentController.GetAppointments (Big_Bang_Assessment_2)'
 2023-07-03 15:10:06.497 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Appointment - - - 200 180028 application/json;+charset=utf-8 106.7794ms
+2023-07-03 15:29:53.049 +05:30 [INF] User profile is available. Using 'C:\Users\test\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-03 15:29:53.707 +05:30 [INF] Now listening on: https://localhost:7123
+2023-07-03 15:29:53.710 +05:30 [INF] Now listening on: http://localhost:5228
+2023-07-03 15:29:53.716 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-03 15:29:53.718 +05:30 [INF] Hosting environment: Development
+2023-07-03 15:29:53.721 +05:30 [INF] Content root path: C:\Users\test\source\repos\Big_Bang_Assessment_2\Big_Bang_Assessment_2\
+2023-07-03 15:29:55.414 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/index.html - -
+2023-07-03 15:29:56.616 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/index.html - - - 200 - text/html;charset=utf-8 1215.5632ms
+2023-07-03 15:29:56.734 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - -
+2023-07-03 15:29:56.737 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/_vs/browserLink - -
+2023-07-03 15:29:56.749 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_framework/aspnetcore-browser-refresh.js - - - 200 12012 application/javascript;+charset=utf-8 15.4664ms
+2023-07-03 15:29:56.895 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 157.5771ms
+2023-07-03 15:29:56.994 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - -
+2023-07-03 15:29:57.367 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 373.2529ms
+2023-07-03 15:34:20.800 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7123/api/Doctor multipart/form-data;+boundary=----WebKitFormBoundarymLFFxAAxPO8iv24N 302776
+2023-07-03 15:34:20.823 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:34:20.990 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.CreateDoctorRequest (Big_Bang_Assessment_2)'
+2023-07-03 15:34:21.154 +05:30 [INF] Route matched with {action = "CreateDoctorRequest", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateDoctorRequest(ClassLibrary.Models.Doctor, Microsoft.AspNetCore.Http.IFormFile) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:34:21.781 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-07-03 15:34:22.094 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.CreateDoctorRequest (Big_Bang_Assessment_2) in 929.7737ms
+2023-07-03 15:34:22.105 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.CreateDoctorRequest (Big_Bang_Assessment_2)'
+2023-07-03 15:34:22.133 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7123/api/Doctor multipart/form-data;+boundary=----WebKitFormBoundarymLFFxAAxPO8iv24N 302776 - 400 245 application/problem+json;+charset=utf-8 1333.4973ms
+2023-07-03 15:34:30.538 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7123/api/Doctor multipart/form-data;+boundary=----WebKitFormBoundarysAwqCy2hd3gePjM1 302683
+2023-07-03 15:34:30.552 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:34:30.558 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.CreateDoctorRequest (Big_Bang_Assessment_2)'
+2023-07-03 15:34:30.607 +05:30 [INF] Route matched with {action = "CreateDoctorRequest", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateDoctorRequest(ClassLibrary.Models.Doctor, Microsoft.AspNetCore.Http.IFormFile) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:34:34.374 +05:30 [INF] Executed DbCommand (335ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = -1) (DbType = Binary), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Doctors] ([Contact_No], [Doctor_Email], [Doctor_Name], [ImageData], [Password], [Specialization], [Status])
+OUTPUT INSERTED.[Doctor_Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2023-07-03 15:34:34.728 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'ClassLibrary.Models.Doctor'.
+2023-07-03 15:34:35.203 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.CreateDoctorRequest (Big_Bang_Assessment_2) in 4551.3234ms
+2023-07-03 15:34:35.209 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.CreateDoctorRequest (Big_Bang_Assessment_2)'
+2023-07-03 15:34:35.268 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7123/api/Doctor multipart/form-data;+boundary=----WebKitFormBoundarysAwqCy2hd3gePjM1 302683 - 201 402695 application/json;+charset=utf-8 4729.8048ms
+2023-07-03 15:34:48.083 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Admin/DoctorRequests - -
+2023-07-03 15:34:48.089 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.AdminController.GetDoctorRequests (Big_Bang_Assessment_2)'
+2023-07-03 15:34:48.098 +05:30 [INF] Route matched with {action = "GetDoctorRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctorRequests() on controller Big_Bang_Assessment_2.Controllers.AdminController (Big_Bang_Assessment_2).
+2023-07-03 15:34:49.063 +05:30 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+FROM [Doctors] AS [d]
+WHERE [d].[Status] = N'Pending'
+2023-07-03 15:34:49.154 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:34:49.189 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.AdminController.GetDoctorRequests (Big_Bang_Assessment_2) in 1085.3818ms
+2023-07-03 15:34:49.193 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.AdminController.GetDoctorRequests (Big_Bang_Assessment_2)'
+2023-07-03 15:34:49.197 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Admin/DoctorRequests - - - 200 402697 application/json;+charset=utf-8 1114.1678ms
+2023-07-03 15:41:55.038 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7123/api/Admin/ApproveDoctorRequest/11 - 0
+2023-07-03 15:41:55.043 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:41:55.045 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.AdminController.ApproveDoctorRequest (Big_Bang_Assessment_2)'
+2023-07-03 15:41:55.058 +05:30 [INF] Route matched with {action = "ApproveDoctorRequest", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ApproveDoctorRequest(Int32) on controller Big_Bang_Assessment_2.Controllers.AdminController (Big_Bang_Assessment_2).
+2023-07-03 15:41:55.485 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+FROM [Doctors] AS [d]
+WHERE [d].[Doctor_Id] = @__p_0
+2023-07-03 15:41:55.570 +05:30 [INF] Executed DbCommand (29ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = -1) (DbType = Binary), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Doctors] SET [Contact_No] = @p0, [Doctor_Email] = @p1, [Doctor_Name] = @p2, [ImageData] = @p3, [Password] = @p4, [Specialization] = @p5, [Status] = @p6
+OUTPUT 1
+WHERE [Doctor_Id] = @p7;
+2023-07-03 15:41:55.599 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-07-03 15:41:55.602 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.AdminController.ApproveDoctorRequest (Big_Bang_Assessment_2) in 534.3331ms
+2023-07-03 15:41:55.608 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.AdminController.ApproveDoctorRequest (Big_Bang_Assessment_2)'
+2023-07-03 15:41:55.612 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7123/api/Admin/ApproveDoctorRequest/11 - 0 - 204 - - 574.2140ms
+2023-07-03 15:42:33.399 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Admin/DoctorRequests - -
+2023-07-03 15:42:33.410 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.AdminController.GetDoctorRequests (Big_Bang_Assessment_2)'
+2023-07-03 15:42:33.413 +05:30 [INF] Route matched with {action = "GetDoctorRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctorRequests() on controller Big_Bang_Assessment_2.Controllers.AdminController (Big_Bang_Assessment_2).
+2023-07-03 15:42:33.437 +05:30 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+FROM [Doctors] AS [d]
+WHERE [d].[Status] = N'Pending'
+2023-07-03 15:42:33.445 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:42:33.450 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.AdminController.GetDoctorRequests (Big_Bang_Assessment_2) in 31.4652ms
+2023-07-03 15:42:33.461 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.AdminController.GetDoctorRequests (Big_Bang_Assessment_2)'
+2023-07-03 15:42:33.467 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Admin/DoctorRequests - - - 200 2 application/json;+charset=utf-8 68.1848ms
+2023-07-03 15:42:36.528 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Admin/DoctorRequests - -
+2023-07-03 15:42:36.531 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.AdminController.GetDoctorRequests (Big_Bang_Assessment_2)'
+2023-07-03 15:42:36.534 +05:30 [INF] Route matched with {action = "GetDoctorRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctorRequests() on controller Big_Bang_Assessment_2.Controllers.AdminController (Big_Bang_Assessment_2).
+2023-07-03 15:42:36.543 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+FROM [Doctors] AS [d]
+WHERE [d].[Status] = N'Pending'
+2023-07-03 15:42:36.550 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:42:36.554 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.AdminController.GetDoctorRequests (Big_Bang_Assessment_2) in 13.7103ms
+2023-07-03 15:42:36.557 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.AdminController.GetDoctorRequests (Big_Bang_Assessment_2)'
+2023-07-03 15:42:36.560 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Admin/DoctorRequests - - - 200 2 application/json;+charset=utf-8 32.3731ms
+2023-07-03 15:42:37.039 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Admin/DoctorRequests - -
+2023-07-03 15:42:37.043 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.AdminController.GetDoctorRequests (Big_Bang_Assessment_2)'
+2023-07-03 15:42:37.046 +05:30 [INF] Route matched with {action = "GetDoctorRequests", controller = "Admin"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctorRequests() on controller Big_Bang_Assessment_2.Controllers.AdminController (Big_Bang_Assessment_2).
+2023-07-03 15:42:37.058 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+FROM [Doctors] AS [d]
+WHERE [d].[Status] = N'Pending'
+2023-07-03 15:42:37.068 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:42:37.072 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.AdminController.GetDoctorRequests (Big_Bang_Assessment_2) in 18.8382ms
+2023-07-03 15:42:37.077 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.AdminController.GetDoctorRequests (Big_Bang_Assessment_2)'
+2023-07-03 15:42:37.082 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Admin/DoctorRequests - - - 200 2 application/json;+charset=utf-8 42.5158ms
+2023-07-03 15:42:44.778 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-03 15:42:44.780 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:42:44.787 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:42:45.043 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-07-03 15:42:45.102 +05:30 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM [Doctors] AS [d]
+LEFT JOIN [Patients] AS [p] ON [d].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [d].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [d].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:42:45.200 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:42:45.337 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 545.4886ms
+2023-07-03 15:42:45.342 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:42:45.344 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 678792 application/json;+charset=utf-8 565.7550ms
+2023-07-03 15:43:06.849 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-03 15:43:06.858 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:43:06.861 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:43:06.866 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:43:06.876 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM [Doctors] AS [d]
+LEFT JOIN [Patients] AS [p] ON [d].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [d].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [d].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:43:06.890 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:43:06.913 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-03 15:43:06.915 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:43:06.919 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:43:06.932 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:43:06.937 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 65.0124ms
+2023-07-03 15:43:06.942 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:43:06.945 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 678792 application/json;+charset=utf-8 95.8536ms
+2023-07-03 15:43:06.950 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM [Doctors] AS [d]
+LEFT JOIN [Patients] AS [p] ON [d].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [d].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [d].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:43:06.970 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:43:07.041 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 102.021ms
+2023-07-03 15:43:07.048 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:43:07.051 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 678792 application/json;+charset=utf-8 138.3777ms
+2023-07-03 15:43:28.520 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor/11 - -
+2023-07-03 15:43:28.523 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:43:28.524 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:43:28.530 +05:30 [INF] Route matched with {action = "GetDoctor", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ClassLibrary.Models.Doctor]] GetDoctor(Int32) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:43:28.588 +05:30 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-07-03 15:43:28.607 +05:30 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Doctor_Id], [t].[Contact_No], [t].[Doctor_Email], [t].[Doctor_Name], [t].[ImageData], [t].[Password], [t].[Specialization], [t].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM (
+    SELECT TOP(1) [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+    FROM [Doctors] AS [d]
+    WHERE [d].[Doctor_Id] = @__id_0
+) AS [t]
+LEFT JOIN [Patients] AS [p] ON [t].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [t].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [t].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:43:28.622 +05:30 [INF] Executing OkObjectResult, writing value of type 'ClassLibrary.Models.Doctor'.
+2023-07-03 15:43:28.683 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2) in 147.2116ms
+2023-07-03 15:43:28.687 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:43:28.689 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor/11 - - - 200 402696 application/json;+charset=utf-8 169.0313ms
+2023-07-03 15:43:31.390 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor/11 - -
+2023-07-03 15:43:31.400 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:43:31.404 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:43:31.412 +05:30 [INF] Route matched with {action = "GetDoctor", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ClassLibrary.Models.Doctor]] GetDoctor(Int32) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:43:31.421 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Doctor_Id], [t].[Contact_No], [t].[Doctor_Email], [t].[Doctor_Name], [t].[ImageData], [t].[Password], [t].[Specialization], [t].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM (
+    SELECT TOP(1) [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+    FROM [Doctors] AS [d]
+    WHERE [d].[Doctor_Id] = @__id_0
+) AS [t]
+LEFT JOIN [Patients] AS [p] ON [t].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [t].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [t].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:43:31.440 +05:30 [INF] Executing OkObjectResult, writing value of type 'ClassLibrary.Models.Doctor'.
+2023-07-03 15:43:31.474 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2) in 55.9924ms
+2023-07-03 15:43:31.478 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:43:31.480 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor/11 - - - 200 402696 application/json;+charset=utf-8 89.7574ms
+2023-07-03 15:43:31.742 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor/11 - -
+2023-07-03 15:43:31.746 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:43:31.751 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:43:31.753 +05:30 [INF] Route matched with {action = "GetDoctor", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ClassLibrary.Models.Doctor]] GetDoctor(Int32) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:43:31.760 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Doctor_Id], [t].[Contact_No], [t].[Doctor_Email], [t].[Doctor_Name], [t].[ImageData], [t].[Password], [t].[Specialization], [t].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM (
+    SELECT TOP(1) [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+    FROM [Doctors] AS [d]
+    WHERE [d].[Doctor_Id] = @__id_0
+) AS [t]
+LEFT JOIN [Patients] AS [p] ON [t].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [t].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [t].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:43:31.794 +05:30 [INF] Executing OkObjectResult, writing value of type 'ClassLibrary.Models.Doctor'.
+2023-07-03 15:43:31.830 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2) in 72.3492ms
+2023-07-03 15:43:31.834 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:43:31.836 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor/11 - - - 200 402696 application/json;+charset=utf-8 93.9641ms
+2023-07-03 15:43:31.900 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor/11 - -
+2023-07-03 15:43:31.907 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:43:31.917 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:43:31.925 +05:30 [INF] Route matched with {action = "GetDoctor", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ClassLibrary.Models.Doctor]] GetDoctor(Int32) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:43:31.935 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Doctor_Id], [t].[Contact_No], [t].[Doctor_Email], [t].[Doctor_Name], [t].[ImageData], [t].[Password], [t].[Specialization], [t].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM (
+    SELECT TOP(1) [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+    FROM [Doctors] AS [d]
+    WHERE [d].[Doctor_Id] = @__id_0
+) AS [t]
+LEFT JOIN [Patients] AS [p] ON [t].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [t].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [t].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:43:31.947 +05:30 [INF] Executing OkObjectResult, writing value of type 'ClassLibrary.Models.Doctor'.
+2023-07-03 15:43:32.011 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2) in 77.9956ms
+2023-07-03 15:43:32.014 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:43:32.017 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor/11 - - - 200 402696 application/json;+charset=utf-8 116.8936ms
+2023-07-03 15:43:32.243 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor/11 - -
+2023-07-03 15:43:32.245 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:43:32.247 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:43:32.251 +05:30 [INF] Route matched with {action = "GetDoctor", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ClassLibrary.Models.Doctor]] GetDoctor(Int32) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:43:32.261 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Doctor_Id], [t].[Contact_No], [t].[Doctor_Email], [t].[Doctor_Name], [t].[ImageData], [t].[Password], [t].[Specialization], [t].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM (
+    SELECT TOP(1) [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status]
+    FROM [Doctors] AS [d]
+    WHERE [d].[Doctor_Id] = @__id_0
+) AS [t]
+LEFT JOIN [Patients] AS [p] ON [t].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [t].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [t].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:43:32.276 +05:30 [INF] Executing OkObjectResult, writing value of type 'ClassLibrary.Models.Doctor'.
+2023-07-03 15:43:32.312 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2) in 54.1427ms
+2023-07-03 15:43:32.315 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:43:32.318 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor/11 - - - 200 402696 application/json;+charset=utf-8 75.4067ms
+2023-07-03 15:45:38.759 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7123/api/Doctor/1 multipart/form-data;+boundary=----WebKitFormBoundary6eU6b71Wx0u9DO5C 870
+2023-07-03 15:45:38.762 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:45:38.764 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:45:38.775 +05:30 [INF] Route matched with {action = "UpdateDoctor", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateDoctor(Int32, ClassLibrary.Models.Doctor, Microsoft.AspNetCore.Http.IFormFile) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:45:38.805 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-07-03 15:45:38.810 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2) in 27.3597ms
+2023-07-03 15:45:38.813 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:45:38.816 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7123/api/Doctor/1 multipart/form-data;+boundary=----WebKitFormBoundary6eU6b71Wx0u9DO5C 870 - 400 292 application/problem+json;+charset=utf-8 57.6242ms
+2023-07-03 15:45:48.649 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7123/api/Doctor/1 multipart/form-data;+boundary=----WebKitFormBoundaryAUtkC24l8EkyOc5G 871
+2023-07-03 15:45:48.651 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:45:48.653 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:45:48.655 +05:30 [INF] Route matched with {action = "UpdateDoctor", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateDoctor(Int32, ClassLibrary.Models.Doctor, Microsoft.AspNetCore.Http.IFormFile) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:45:48.663 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2023-07-03 15:45:48.668 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2) in 6.48ms
+2023-07-03 15:45:48.677 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:45:48.684 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7123/api/Doctor/1 multipart/form-data;+boundary=----WebKitFormBoundaryAUtkC24l8EkyOc5G 871 - 400 251 application/problem+json;+charset=utf-8 35.4633ms
+2023-07-03 15:45:58.397 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7123/api/Doctor/1 multipart/form-data;+boundary=----WebKitFormBoundaryOVwVReRjU0xQBk3y 11994
+2023-07-03 15:45:58.402 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:45:58.404 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:45:58.407 +05:30 [INF] Route matched with {action = "UpdateDoctor", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateDoctor(Int32, ClassLibrary.Models.Doctor, Microsoft.AspNetCore.Http.IFormFile) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:45:58.437 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = -1) (DbType = Binary), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Doctors] SET [Contact_No] = @p0, [Doctor_Email] = @p1, [Doctor_Name] = @p2, [ImageData] = @p3, [Password] = @p4, [Specialization] = @p5, [Status] = @p6
+OUTPUT 1
+WHERE [Doctor_Id] = @p7;
+2023-07-03 15:45:58.445 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-07-03 15:45:58.454 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2) in 41.9772ms
+2023-07-03 15:45:58.464 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:45:58.468 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7123/api/Doctor/1 multipart/form-data;+boundary=----WebKitFormBoundaryOVwVReRjU0xQBk3y 11994 - 204 - - 69.9783ms
+2023-07-03 15:46:03.796 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-03 15:46:03.798 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:46:03.801 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:46:03.813 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:46:03.834 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM [Doctors] AS [d]
+LEFT JOIN [Patients] AS [p] ON [d].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [d].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [d].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:46:03.862 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:46:03.925 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-03 15:46:03.945 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:46:03.961 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:46:03.973 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:46:03.994 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM [Doctors] AS [d]
+LEFT JOIN [Patients] AS [p] ON [d].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [d].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [d].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:46:04.003 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 179.6897ms
+2023-07-03 15:46:04.009 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:46:04.016 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 678768 application/json;+charset=utf-8 219.4887ms
+2023-07-03 15:46:04.025 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:46:04.087 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 96.3562ms
+2023-07-03 15:46:04.092 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:46:04.095 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 678768 application/json;+charset=utf-8 173.3843ms
+2023-07-03 15:46:31.870 +05:30 [INF] Request starting HTTP/2 POST https://localhost:7123/api/Doctor multipart/form-data;+boundary=----WebKitFormBoundaryZBLkuApzTlbVCHVq 302782
+2023-07-03 15:46:31.874 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:46:31.876 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.CreateDoctorRequest (Big_Bang_Assessment_2)'
+2023-07-03 15:46:31.878 +05:30 [INF] Route matched with {action = "CreateDoctorRequest", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateDoctorRequest(ClassLibrary.Models.Doctor, Microsoft.AspNetCore.Http.IFormFile) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:46:31.955 +05:30 [INF] Executed DbCommand (28ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = -1) (DbType = Binary), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Doctors] ([Contact_No], [Doctor_Email], [Doctor_Name], [ImageData], [Password], [Specialization], [Status])
+OUTPUT INSERTED.[Doctor_Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2023-07-03 15:46:31.964 +05:30 [INF] Executing CreatedAtActionResult, writing value of type 'ClassLibrary.Models.Doctor'.
+2023-07-03 15:46:32.007 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.CreateDoctorRequest (Big_Bang_Assessment_2) in 121.2015ms
+2023-07-03 15:46:32.010 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.CreateDoctorRequest (Big_Bang_Assessment_2)'
+2023-07-03 15:46:32.017 +05:30 [INF] Request finished HTTP/2 POST https://localhost:7123/api/Doctor multipart/form-data;+boundary=----WebKitFormBoundaryZBLkuApzTlbVCHVq 302782 - 201 402695 application/json;+charset=utf-8 146.7754ms
+2023-07-03 15:46:56.111 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-03 15:46:56.115 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:46:56.118 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:46:56.125 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:46:56.166 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM [Doctors] AS [d]
+LEFT JOIN [Patients] AS [p] ON [d].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [d].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [d].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:46:56.225 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:46:56.330 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-03 15:46:56.336 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:46:56.339 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:46:56.341 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:46:56.353 +05:30 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM [Doctors] AS [d]
+LEFT JOIN [Patients] AS [p] ON [d].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [d].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [d].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:46:56.388 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 245.9527ms
+2023-07-03 15:46:56.393 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:46:56.395 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 1081464 application/json;+charset=utf-8 284.0813ms
+2023-07-03 15:46:56.416 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:46:56.551 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 202.2534ms
+2023-07-03 15:46:56.554 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:46:56.556 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 1081464 application/json;+charset=utf-8 225.8374ms
+2023-07-03 15:46:58.843 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-03 15:46:58.848 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:46:58.850 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:46:58.856 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:46:58.876 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM [Doctors] AS [d]
+LEFT JOIN [Patients] AS [p] ON [d].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [d].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [d].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:46:58.914 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:46:58.982 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 114.2484ms
+2023-07-03 15:46:58.985 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:46:58.988 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 1081464 application/json;+charset=utf-8 145.0689ms
+2023-07-03 15:46:59.088 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-03 15:46:59.090 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:46:59.092 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:46:59.101 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:46:59.122 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM [Doctors] AS [d]
+LEFT JOIN [Patients] AS [p] ON [d].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [d].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [d].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:46:59.155 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:46:59.195 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-03 15:46:59.210 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:46:59.244 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:46:59.245 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 136.1854ms
+2023-07-03 15:46:59.254 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:46:59.259 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:46:59.261 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 1081464 application/json;+charset=utf-8 173.0107ms
+2023-07-03 15:46:59.273 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM [Doctors] AS [d]
+LEFT JOIN [Patients] AS [p] ON [d].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [d].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [d].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:46:59.295 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:46:59.392 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 124.1146ms
+2023-07-03 15:46:59.399 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:46:59.403 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 1081464 application/json;+charset=utf-8 207.5472ms
+2023-07-03 15:47:22.299 +05:30 [INF] Request starting HTTP/2 PUT https://localhost:7123/api/Doctor/1 multipart/form-data;+boundary=----WebKitFormBoundaryVAgGxMSYVcVylBmc 12093
+2023-07-03 15:47:22.303 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:47:22.305 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:47:22.308 +05:30 [INF] Route matched with {action = "UpdateDoctor", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateDoctor(Int32, ClassLibrary.Models.Doctor, Microsoft.AspNetCore.Http.IFormFile) on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:47:22.325 +05:30 [INF] Executed DbCommand (8ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = -1) (DbType = Binary), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Doctors] SET [Contact_No] = @p0, [Doctor_Email] = @p1, [Doctor_Name] = @p2, [ImageData] = @p3, [Password] = @p4, [Specialization] = @p5, [Status] = @p6
+OUTPUT 1
+WHERE [Doctor_Id] = @p7;
+2023-07-03 15:47:22.335 +05:30 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-07-03 15:47:22.337 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2) in 23.4962ms
+2023-07-03 15:47:22.340 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.UpdateDoctor (Big_Bang_Assessment_2)'
+2023-07-03 15:47:22.374 +05:30 [INF] Request finished HTTP/2 PUT https://localhost:7123/api/Doctor/1 multipart/form-data;+boundary=----WebKitFormBoundaryVAgGxMSYVcVylBmc 12093 - 204 - - 74.5015ms
+2023-07-03 15:47:26.748 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-03 15:47:26.753 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:47:26.767 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:47:26.772 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:47:26.787 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM [Doctors] AS [d]
+LEFT JOIN [Patients] AS [p] ON [d].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [d].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [d].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:47:26.813 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:47:26.948 +05:30 [INF] Request starting HTTP/2 GET https://localhost:7123/api/Doctor - -
+2023-07-03 15:47:26.960 +05:30 [INF] CORS policy execution successful.
+2023-07-03 15:47:26.967 +05:30 [INF] Executing endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:47:26.979 +05:30 [INF] Route matched with {action = "GetDoctors", controller = "Doctor"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ClassLibrary.Models.Doctor]]] GetDoctors() on controller Big_Bang_Assessment_2.Controllers.DoctorController (Big_Bang_Assessment_2).
+2023-07-03 15:47:26.984 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 201.124ms
+2023-07-03 15:47:26.994 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:47:26.996 +05:30 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [d].[Doctor_Id], [d].[Contact_No], [d].[Doctor_Email], [d].[Doctor_Name], [d].[ImageData], [d].[Password], [d].[Specialization], [d].[Status], [p].[Patient_Id], [p].[Disease], [p].[Disease_Description], [p].[DoctorId], [p].[Password], [p].[Patient_Name], [p].[Patient_No], [a].[AppointmentId], [a].[AppointmentDate], [a].[Description], [a].[DoctorId], [a].[PatientEmail], [a].[PatientId], [a].[PatientName], [a].[PatientPhoneNumber]
+FROM [Doctors] AS [d]
+LEFT JOIN [Patients] AS [p] ON [d].[Doctor_Id] = [p].[DoctorId]
+LEFT JOIN [Appointments] AS [a] ON [d].[Doctor_Id] = [a].[DoctorId]
+ORDER BY [d].[Doctor_Id], [p].[Patient_Id]
+2023-07-03 15:47:26.997 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 1081482 application/json;+charset=utf-8 249.0603ms
+2023-07-03 15:47:27.030 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ClassLibrary.Models.Doctor, ClassLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-03 15:47:27.127 +05:30 [INF] Executed action Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2) in 138.7429ms
+2023-07-03 15:47:27.129 +05:30 [INF] Executed endpoint 'Big_Bang_Assessment_2.Controllers.DoctorController.GetDoctors (Big_Bang_Assessment_2)'
+2023-07-03 15:47:27.131 +05:30 [INF] Request finished HTTP/2 GET https://localhost:7123/api/Doctor - - - 200 1081482 application/json;+charset=utf-8 183.1543ms

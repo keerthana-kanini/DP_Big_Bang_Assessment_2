@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Big_Bang_Assessment_2.Controllers
 {
-   // [Authorize(Roles = "Admin")]
+
     [Route("api/[controller]")]
     [ApiController]
     public class DoctorController : ControllerBase
@@ -23,7 +23,7 @@ namespace Big_Bang_Assessment_2.Controllers
         }
 
         // GET: api/Doctors
-        [Authorize(Roles = "Admin")]
+
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Doctor>>> GetDoctors()
         {
@@ -46,6 +46,7 @@ namespace Big_Bang_Assessment_2.Controllers
         }
 
         // PUT: api/Doctors/5
+        //    [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateDoctor(int id, [FromForm] Doctor doctor, IFormFile imageFile)
         {
@@ -80,9 +81,10 @@ namespace Big_Bang_Assessment_2.Controllers
         }
 
 
-        // POST: api/Doctors
+        // POST: api/Doctor
+        //[Authorize(Roles = "Admin")]
         [HttpPost]
-        public async Task<ActionResult<Doctor>> PostDoctor(IFormFile imageFile, [FromForm] Doctor doctor)
+        public async Task<IActionResult> CreateDoctorRequest([FromForm] Doctor doctor, IFormFile imageFile)
         {
             if (imageFile == null || imageFile.Length <= 0)
             {
@@ -92,13 +94,27 @@ namespace Big_Bang_Assessment_2.Controllers
             var imageData = await ConvertImageToByteArray(imageFile);
             doctor.ImageData = imageData;
 
+            doctor.Status = "Pending"; // Set the status of the doctor to "Pending"
+
             await _doctorRepository.AddDoctor(doctor);
+
+            // Send approval request to the admin
+            SendApprovalRequestToAdmin(doctor.Doctor_Id);
 
             return CreatedAtAction("GetDoctor", new { id = doctor.Doctor_Id }, doctor);
         }
 
+        private void SendApprovalRequestToAdmin(int doctorId)
+        {
+            // Implement the logic to send an approval request to the admin
+        }
         private async Task<byte[]> ConvertImageToByteArray(IFormFile imageFile)
         {
+            if (imageFile == null || imageFile.Length == 0)
+            {
+                return null;
+            }
+
             using (var memoryStream = new MemoryStream())
             {
                 await imageFile.CopyToAsync(memoryStream);
@@ -106,7 +122,9 @@ namespace Big_Bang_Assessment_2.Controllers
             }
         }
 
+
         // DELETE: api/Doctors/5
+        // [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDoctor(int id)
         {
@@ -120,6 +138,26 @@ namespace Big_Bang_Assessment_2.Controllers
 
             return NoContent();
         }
-       
+
+        // GET: api/Doctor/BySpecialization?specialization=xxx
+        [HttpGet("BySpecialization")]
+        public async Task<ActionResult<IEnumerable<Doctor>>> GetDoctorsBySpecialization(string specialization)
+        {
+            var doctors = await _doctorRepository.GetDoctors();
+            var filteredDoctors = doctors.Where(d => d.Specialization != null && d.Specialization.Equals(specialization, StringComparison.OrdinalIgnoreCase));
+            return Ok(filteredDoctors);
+        }
+
+
+        // GET: api/Doctor/ApprovedDoctors
+        [HttpGet("ApprovedDoctors")]
+        public async Task<ActionResult<IEnumerable<Doctor>>> GetApprovedDoctors()
+        {
+            var approvedDoctors = await _doctorRepository.GetDoctors();
+            var filteredDoctors = approvedDoctors.Where(d => d.Status == "Approved");
+            return Ok(filteredDoctors);
+        }
+
+
     }
 }

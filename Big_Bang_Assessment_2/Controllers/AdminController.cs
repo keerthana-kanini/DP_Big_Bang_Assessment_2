@@ -41,15 +41,16 @@ namespace Big_Bang_Assessment_2.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error occurred while retrieving admins.");
             }
         }
+
         private string HashPassword(string password)
         {
-
             using (var sha256 = SHA256.Create())
             {
                 var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
                 return Convert.ToBase64String(hashedBytes);
             }
         }
+
         // GET: api/Admins/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Admin>> GetAdmin(int id)
@@ -123,6 +124,40 @@ namespace Big_Bang_Assessment_2.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
-    }
 
+        // GET: api/Admins/DoctorRequests
+        [HttpGet("DoctorRequests")]
+        public async Task<ActionResult<IEnumerable<Doctor>>> GetDoctorRequests()
+        {
+            try
+            {
+                // Retrieve all doctors with status "Pending"
+                var doctorRequests = await _adminRepository.GetDoctorRequests();
+                return Ok(doctorRequests);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+
+        // POST: api/Admins/ApproveDoctorRequest/5
+        [HttpPost("ApproveDoctorRequest/{id}")]
+        public async Task<IActionResult> ApproveDoctorRequest(int id)
+        {
+            try
+            {
+                var result = await _adminRepository.ApproveDoctorRequest(id);
+                if (!result)
+                {
+                    return NotFound();
+                }
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }
+        }
+    }
 }

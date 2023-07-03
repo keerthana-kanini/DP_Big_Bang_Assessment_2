@@ -73,10 +73,50 @@ namespace Big_Bang_Assessment_2.Repository.RepositoryClass
             return true;
         }
 
+        public async Task<IEnumerable<Doctor>> GetDoctorRequests()
+        {
+            return await _context.Doctors.Where(d => d.Status == "Pending").ToListAsync();
+        }
+
+        public async Task<bool> ApproveDoctorRequest(int id)
+        {
+            var doctor = await _context.Doctors.FindAsync(id);
+            if (doctor == null)
+            {
+                return false;
+            }
+
+            // Update the status of the doctor to "Approved"
+            doctor.Status = "Approved";
+            _context.Entry(doctor).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!DoctorExists(id))
+                {
+                    return false;
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return true;
+        }
+
         private bool AdminExists(int id)
         {
             return _context.Admins.Any(e => e.Admin_Id == id);
         }
-    }
 
+        private bool DoctorExists(int id)
+        {
+            return _context.Doctors.Any(e => e.Doctor_Id == id);
+        }
+    }
 }

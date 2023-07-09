@@ -8,7 +8,7 @@ using System.Data;
 
 namespace Big_Bang_Assessment_2.Controllers
 {
-    //[Authorize(Roles = "Admin,Doctor,Patient")]
+    
     [Route("api/[controller]")]
     [ApiController]
     public class AppointmentController : ControllerBase

@@ -46,7 +46,6 @@ namespace Big_Bang_Assessment_2.Controllers
         }
 
         // PUT: api/Doctors/5
-        //    [Authorize(Roles = "Admin")]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateDoctor(int id, [FromForm] Doctor doctor, IFormFile imageFile)
         {
@@ -82,7 +81,6 @@ namespace Big_Bang_Assessment_2.Controllers
 
 
         // POST: api/Doctor
-        //[Authorize(Roles = "Admin")]
         [HttpPost]
         public async Task<IActionResult> CreateDoctorRequest([FromForm] Doctor doctor, IFormFile imageFile)
         {
@@ -124,7 +122,6 @@ namespace Big_Bang_Assessment_2.Controllers
 
 
         // DELETE: api/Doctors/5
-        // [Authorize(Roles = "Admin")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteDoctor(int id)
         {
